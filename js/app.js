@@ -8,7 +8,7 @@
    - Menú, modo oscuro, buscadores, animaciones
    ============================================================ */
 
-const DB_KEY = "f1_db_v2";
+const DB_KEY = "f1_db_v3";
 const AUTH_KEY = "f1_admin_session";
 const ADMIN_PASSWORD = "f1admin2027"; // demo únicamente, ver README
 
@@ -272,7 +272,9 @@ function powerTrendArrow(rank, prevRank) {
    ---------------------------------------------------------- */
 function renderHome() {
   const ds = driverStandings();
-  const leader = getDriver("coffin");
+  const favorite = [...DB.drivers]
+  .filter(d => d.odds)
+  .sort((a, b) => a.odds - b.odds)[0];
   const el = id => document.getElementById(id);
 
   if (el("home-favorito")) {
