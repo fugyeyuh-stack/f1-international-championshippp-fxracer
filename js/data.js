@@ -35,6 +35,7 @@ const DEFAULT_TEAMS = [
   { id: "haastgr",    name: "Haas TGR",      color: "#B6BABD", points: 0, wins: 0, poles: 0, podiums: 0, odds: 21 },
   { id: "astonmartin",name: "Aston Martin",  color: "#006F62", points: 0, wins: 0, poles: 0, podiums: 0, odds: 13 },
   { id: "alpine",     name: "Alpine",        color: "#0090FF", points: 0, wins: 0, poles: 0, podiums: 0, odds: 17 },
+  { id: "lotusrenaultracing",     name: "Lotus Renault Racing",        color: "#B6995B", points: 0, wins: 0, poles: 0, podiums: 0, odds: 19 },
 ];
 
 /* ---------------------- PILOTOS (22) ----------------------
