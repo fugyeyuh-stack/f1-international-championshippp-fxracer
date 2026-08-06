@@ -278,15 +278,15 @@ function renderHome() {
   const el = id => document.getElementById(id);
 
   if (el("home-favorito")) {
-    el("home-favorito").innerHTML = leader ? `
+    el("home-favorito").innerHTML = favorite ? `
       <div class="fav-driver">
-        <div class="fav-number" style="color:${teamColor(leader.teamId)}">#${leader.number}</div>
+        <div class="fav-number" style="color:${teamColor(favorite.teamId)}">#${favorite.number}</div>
         <div>
-          <div class="fav-name">${leader.name}</div>
-          <div class="fav-team">${teamName(leader.teamId)}</div>
+          <div class="fav-name">${favorite.name}</div>
+          <div class="fav-team">${teamName(favorite.teamId)}</div>
         </div>
       </div>
-      <div class="fav-odds">Cuota <strong>${leader.odds ?? "—"}</strong> · ${leader.probability ?? 0}% prob.</div>
+      <div class="fav-odds">Cuota <strong>${favorite.odds ?? "—"}</strong> · ${favorite.probability ?? 0}% prob.</div>
     ` : "";
   }
 
