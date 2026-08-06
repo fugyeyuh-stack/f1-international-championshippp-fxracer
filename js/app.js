@@ -272,7 +272,7 @@ function powerTrendArrow(rank, prevRank) {
    ---------------------------------------------------------- */
 function renderHome() {
   const ds = driverStandings();
-  const leader = ds[0];
+  const leader = DB.drivers.find(d => d.name === "coffin");
   const el = id => document.getElementById(id);
 
   if (el("home-favorito")) {
