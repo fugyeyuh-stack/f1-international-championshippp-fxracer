@@ -292,7 +292,8 @@ function renderHome() {
       <div class="fav-odds">Cuota <strong>${favorite.odds ?? "—"}</strong> · ${favorite.probability ?? 0}% prob.</div>
     ` : "";
   }
-   const nextRace = DB.calendar.find(r => raceStatus(r.r1) !== "finalizado");
+const nextRace = DB.calendar.find(r =>
+  raceStatus(r.r2) !== "finalizado"
 });
   if (el("home-proximo") && nextRace) {
     el("home-proximo").innerHTML = `
