@@ -103,7 +103,7 @@ const DEFAULT_DRIVERS = [
     bio: "Hizo una temporada regular. Da el salto a Ferrari para la 26/27.",
     career: { wins: 0, podiums: 0, poles: 0, fastLaps: 0, dnf: 5, points: 95 },
     season: { wins: 0, podiums: 0, poles: 0, fastLaps: 0, dnf: 0, points: 0 },
-    odds: 12, oddsPrev: 13, probability: 4, oddsHistory: [14, 13.5, 12.8, 12],
+    odds: 13, oddsPrev: 13.5, probability: 4, oddsHistory: [14, 13.7, 13.5, 13],
     powerRank: 6, powerRankPrev: 6,
   },
   {
