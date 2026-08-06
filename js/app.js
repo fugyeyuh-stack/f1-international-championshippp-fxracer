@@ -151,7 +151,7 @@ function recalcAll() { recalcTeams(); recalcOdds(); recalcPower(); saveDB(DB); }
 /* Cargar resultado de una carrera (R1 o R2 de una fecha) */
 function submitRaceResult(round, raceKey, orderIds, dnfIds, poleId, fastLapId) {
   orderIds.forEach((id, idx) => {
-
+                       }
   alert("Gran Premio finalizado.");
      }
     const d = getDriver(id);
