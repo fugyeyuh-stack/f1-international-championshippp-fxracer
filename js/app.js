@@ -8,7 +8,7 @@
    - Menú, modo oscuro, buscadores, animaciones
    ============================================================ */
 
-const DB_KEY = "f1_db_v3";
+const DB_KEY = "f1_db_v4";
 const AUTH_KEY = "f1_admin_session";
 const ADMIN_PASSWORD = "f1admin2027"; // demo únicamente, ver README
 
@@ -151,6 +151,17 @@ function recalcAll() { recalcTeams(); recalcOdds(); recalcPower(); saveDB(DB); }
 /* Cargar resultado de una carrera (R1 o R2 de una fecha) */
 function submitRaceResult(round, raceKey, orderIds, dnfIds, poleId, fastLapId) {
   orderIds.forEach((id, idx) => {
+     function finishRace(round) {
+  const race = DB.calendar.find(r => r.round == round);
+
+  if (!race) return;
+
+  race.finished = true;
+
+  saveDB(DB);
+
+  alert("Gran Premio finalizado.");
+     }
     const d = getDriver(id);
     if (!d) return;
     const pts = POINTS_SYSTEM[idx] || 0;
@@ -289,10 +300,7 @@ function renderHome() {
       <div class="fav-odds">Cuota <strong>${favorite.odds ?? "—"}</strong> · ${favorite.probability ?? 0}% prob.</div>
     ` : "";
   }
-
-  const nextRace = DB.calendar.find(r => {
-  return raceStatus(r.r1) !== "finalizado" ||
-         raceStatus(r.r2) !== "finalizado";
+const nextRace = DB.calendar.find(r => !r.finished);   
 });
   if (el("home-proximo") && nextRace) {
     el("home-proximo").innerHTML = `
