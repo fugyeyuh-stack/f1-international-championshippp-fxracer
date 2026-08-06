@@ -290,7 +290,10 @@ function renderHome() {
     ` : "";
   }
 
-  const nextRace = DB.calendar.find(r => raceStatus(r.r1) !== "finalizado");
+  const nextRace = DB.calendar.find(r => {
+  return raceStatus(r.r1) !== "finalizado" ||
+         raceStatus(r.r2) !== "finalizado";
+});
   if (el("home-proximo") && nextRace) {
     el("home-proximo").innerHTML = `
       <div class="next-gp">
