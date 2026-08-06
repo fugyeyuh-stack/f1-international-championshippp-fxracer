@@ -20,7 +20,7 @@
 
 const SEASON_LABEL = "Temporada 26/27";
 
-/* ---------------------- EQUIPOS (11) ---------------------- */
+/* ---------------------- EQUIPOS (12) ---------------------- */
 /* points/wins/poles/podiums = temporada actual (arranca en 0,
    la temporada todavía no empezó: primera carrera 12/09). */
 const DEFAULT_TEAMS = [
@@ -38,7 +38,7 @@ const DEFAULT_TEAMS = [
   { id: "lotusrenaultracing",     name: "Lotus Renault Racing",        color: "#B6995B", points: 0, wins: 0, poles: 0, podiums: 0, odds: 19 },
 ];
 
-/* ---------------------- PILOTOS (22) ----------------------
+/* ---------------------- PILOTOS (24) ----------------------
    status: "confirmado" | "rumor" | "libre"
    teamId: null si no tiene equipo
    career = estadísticas de temporadas anteriores (histórico)
@@ -216,7 +216,7 @@ const DEFAULT_DRIVERS = [
     odds: 101, oddsPrev: 101, probability: 0.3, oddsHistory: [101, 101, 101, 101],
     powerRank: 17, powerRankPrev: 17,
   },
-  /* 5 asientos libres reservados para futuras incorporaciones */
+  /* 7 asientos libres reservados para futuras incorporaciones */
   { id: "libre1", name: "Piloto libre 1", number: 2, country: "Por confirmar", flag: "🏳️", teamId: null, status: "libre", rumorTeams: [], age: null, seasons: 0, bestResult: "—", bio: "Asiento disponible. Piloto a confirmar próximamente.", career: { wins: 0, podiums: 0, poles: 0, fastLaps: 0, dnf: 0, points: 0 }, season: { wins: 0, podiums: 0, poles: 0, fastLaps: 0, dnf: 0, points: 0 }, odds: null, oddsPrev: null, probability: null, oddsHistory: [], powerRank: 18, powerRankPrev: 18 },
   { id: "libre2", name: "Piloto libre 2", number: 3, country: "Por confirmar", flag: "🏳️", teamId: null, status: "libre", rumorTeams: [], age: null, seasons: 0, bestResult: "—", bio: "Asiento disponible. Piloto a confirmar próximamente.", career: { wins: 0, podiums: 0, poles: 0, fastLaps: 0, dnf: 0, points: 0 }, season: { wins: 0, podiums: 0, poles: 0, fastLaps: 0, dnf: 0, points: 0 }, odds: null, oddsPrev: null, probability: null, oddsHistory: [], powerRank: 19, powerRankPrev: 19 },
   { id: "libre3", name: "Piloto libre 3", number: 4, country: "Por confirmar", flag: "🏳️", teamId: null, status: "libre", rumorTeams: [], age: null, seasons: 0, bestResult: "—", bio: "Asiento disponible. Piloto a confirmar próximamente.", career: { wins: 0, podiums: 0, poles: 0, fastLaps: 0, dnf: 0, points: 0 }, season: { wins: 0, podiums: 0, poles: 0, fastLaps: 0, dnf: 0, points: 0 }, odds: null, oddsPrev: null, probability: null, oddsHistory: [], powerRank: 20, powerRankPrev: 20 },
