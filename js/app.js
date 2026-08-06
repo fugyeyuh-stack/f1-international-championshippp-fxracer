@@ -8,7 +8,7 @@
    - Menú, modo oscuro, buscadores, animaciones
    ============================================================ */
 
-const DB_KEY = "f1_db_v1";
+const DB_KEY = "f1_db_v2";
 const AUTH_KEY = "f1_admin_session";
 const ADMIN_PASSWORD = "f1admin2027"; // demo únicamente, ver README
 
